@@ -2,6 +2,7 @@
   "name": "single-package-template",
   "version": "0.0.1",
   "author": "Ivan Savi",
+  "license": "MIT",
   "files": [
     "dist"
   ],
