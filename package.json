@@ -22,7 +22,7 @@
     "prettier:fix": "prettier --write \"src/**/*.{js,ts,jsx,tsx,scss,html,yml,yaml}\"",
     "lint-staged": "lint-staged",
     "prepare": "husky install",
-    "commitlint": "commitlint"
+    "commitlint": "commitlint --edit $1"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^13.2.0",
