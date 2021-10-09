@@ -1,0 +1,50 @@
+{
+  "name": "single-package-template",
+  "version": "0.0.1",
+  "author": "Ivan Savi",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "lint": "eslint --ext .ts,.tsx ./packages",
+    "lint:fix": "eslint --fix --ext .ts,.tsx ./packages",
+    "prettier:fix": "prettier --write \"packages/**/src/**/*.{js,ts,jsx,tsx,scss,html,yml,yaml}\"",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install",
+    "commitlint": "commitlint"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^13.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "commitlint": "^13.2.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.1",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.3",
+    "vite-plugin-dts": "^0.8.2"
+  },
+  "lint-staged": {
+    "packages/**/src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "packages/**/src/**/*.{css,scss}": [
+      "prettier --write"
+    ]
+  }
+}
