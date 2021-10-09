@@ -1,6 +1,6 @@
-# Template to build monorepo with yarn 3 and vite
+# NPM package boilerplate
 
-This repository contains preconfigured environment to create npm packages with yarn 3.
+This repository contains preconfigured environment to create npm packages.
 
 Caveats: This template configured for _typescript_ and does not suitable for development packages in _javascript_
 
@@ -12,11 +12,13 @@ Caveats: This template configured for _typescript_ and does not suitable for dev
 - lint-staged 11
 - prettier 2
 - typescript 4.4
-
-Also, it includes packages examples with configured `vite` bundler to build them in _lib_ mode.
-
+- vite 2.6
 
 
 ### Commitlint
 
 The commitlint configured with [config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional)
+
+### Maintainer
+
+Ivan Savi. License: MIT
